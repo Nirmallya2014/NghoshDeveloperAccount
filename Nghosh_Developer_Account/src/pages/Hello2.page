@@ -1,0 +1,30 @@
+<apex:page sidebar="false" standardController="Candidate__c">
+<apex:pageBlock title="User Information">
+<apex:pageBlockSection >
+<p style="color:blue;background-color:lightgrey;font-size:200%"><marquee behavior="alternate">Welcome {!$User.FirstName &' '& $User.LastName} !!! {!$User.Title}</marquee></p>
+</apex:pageBlockSection>
+</apex:pageBlock>
+<apex:pageBlock title="A Block Title">
+  <apex:pageBlockSection title="A Section Title">
+  I'm three components deep!
+  </apex:pageBlockSection>
+  <apex:pageBlockSection title="A New Section Title">
+  This is another section.
+  </apex:pageBlockSection>
+  <apex:pageblockSection title="Candidate Details">
+  <apex:detail relatedList="false"/>
+  </apex:pageblockSection>
+  <apex:pageBlockSection title="Candidate Table">
+  <apex:pageBlockTable value="{!Candidate__c}" var="Candi">
+  <apex:column value="{!Candi.First_Name__c}"/>
+  <apex:column value="{!Candi.Last_Name__c}"/>
+  </apex:pageBlockTable>
+  </apex:pageBlockSection>
+  <apex:pageBlockSection title="Extra">
+  Here goes all extra contents.
+  </apex:pageBlockSection>
+  <apex:pageBlockSection title="Demo">
+  This is Demo Section Context.
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+</apex:page>

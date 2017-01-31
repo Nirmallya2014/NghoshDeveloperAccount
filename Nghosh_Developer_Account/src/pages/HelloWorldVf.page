@@ -1,0 +1,6 @@
+<apex:page standardController="Application__c">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Hello World!!!!!!!!!</h1>
+    Happy Coding!!!
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

@@ -1,0 +1,25 @@
+<apex:page controller="Pagination">
+    <apex:form >
+        Standard Set Controller Example    
+        <apex:pageBlock id="pb">
+            <apex:pageBlockTable value="{!Accounts}" var="a">
+                <apex:column headerValue="Account names" value="{!a.Name}"/>
+                <apex:column headerValue="Account type" value="{!a.Type}"/>
+                <apex:column value="{!a.BillingCity}"/>
+                <apex:column value="{!a.BillingState}"/>
+                <apex:column value="{!a.BillingCountry}"/>
+            </apex:pageBlockTable>
+            <apex:panelGrid columns="7">
+                <apex:commandButton status="fetchStatus" reRender="pb" value="|<" action="{!first}" disabled="{!!hasPrevious}" title="First Page"/>
+                <apex:commandButton status="fetchStatus" reRender="pb" value="<" action="{!previous}" disabled="{!!hasPrevious}" title="Previous Page"/>
+                <apex:commandButton status="fetchStatus" reRender="pb" value=">" action="{!next}" disabled="{!!hasNext}" title="Next Page"/>
+                <apex:commandButton status="fetchStatus" reRender="pb" value=">|" action="{!last}" disabled="{!!hasNext}" title="Last Page"/>
+                <apex:outputText >{!(pageNumber * size)+1-size}-{!IF((pageNumber * size)>noOfRecords, noOfRecords,(pageNumber * size))} of {!noOfRecords}</apex:outputText>
+                <apex:commandButton status="fetchStatus" reRender="pb" value="Refresh" action="{!refresh}" title="Refresh Page"/>
+                <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                    <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText=""/>
+                </apex:outputPanel>
+            </apex:panelGrid>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
