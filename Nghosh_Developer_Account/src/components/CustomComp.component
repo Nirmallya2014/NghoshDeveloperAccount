@@ -1,6 +1,0 @@
-<apex:component controller="ComponentControllers">
-  <!-- Begin Default Content REMOVE THIS -->
-  <h1>Congratulations</h1>
-  This is my custom component
-  <!-- End Default Content REMOVE THIS -->
-</apex:component>

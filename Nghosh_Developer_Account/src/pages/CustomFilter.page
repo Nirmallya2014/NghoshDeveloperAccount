@@ -1,9 +1,0 @@
-<apex:page controller="SearchLookUpController">
-<Apex:form >
-Search By - Test 1 Test Page
-<apex:selectList value="{!searchBy}" size="1">
-<apex:selectOption itemValue="Contact Name"></apex:selectOption>
-<apex:selectOption itemValue="Account Name"></apex:selectOption>
-</apex:selectList>
-</Apex:form>
-</apex:page>

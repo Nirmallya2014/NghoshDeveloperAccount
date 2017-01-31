@@ -1,8 +1,0 @@
-<apex:page controller="AttachmentUploadController2">
-    <apex:form >
-        <apex:pagemessages />
-        <apex:outputText value="Parent Object ID: "/><apex:inputText value="{!parentId}"/><br/>
-        <apex:outputText value="Input File:  "/><apex:inputFile value="{!attach.body}" filename="{!attach.name}"/><br/>
-        <apex:commandButton value="Upload" action="{!upload}"/>
-    </apex:form>
-</apex:page>
