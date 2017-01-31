@@ -1,0 +1,11 @@
+<apex:page controller="IframeController">
+   <apex:form >
+        <apex:commandButton action="{!ShowFrame}" value="BiilingInformation" reRender="outerPanel" />
+        <apex:commandButton action="{!HideFrame}" value="HideBiilingInformation" reRender="outerPanel" />
+            <apex:outputPanel id="outerPanel">
+            <apex:pageBlock title="My Content" mode="edit" rendered="{!IfreameStatus}" >
+            <apex:iframe src="https://www.inadev.net/tracker/" scrolling="false" id="theIframe"/>
+        </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+  </apex:page>

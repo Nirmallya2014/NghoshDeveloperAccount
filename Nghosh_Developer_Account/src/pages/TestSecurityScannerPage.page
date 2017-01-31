@@ -1,0 +1,6 @@
+<apex:page controller="TestSecurityScanner" action="{!getAllDetails}">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations----</h1>
+  <apex:outputLabel value="{!HTMLENCODE(fname)}" />  
+  <apex:outputLabel value="{!HTMLENCODE(lname)}" escape="false"/>
+</apex:page>

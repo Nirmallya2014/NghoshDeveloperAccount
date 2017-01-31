@@ -1,0 +1,18 @@
+<apex:page controller="ShowAllAccountClass">
+<apex:pageblock >
+    <apex:variable value="{!1}" var="index"> </apex:variable> <!--Just to add Row Number for Fun -->
+    <apex:pageblocktable value="{!Acc}" var="account" id="pbTable">
+<apex:column value="{!index}"/>
+<apex:column value="{!account.Id}"/>
+<apex:column value="{!account.Name}"/>
+<apex:column value="{!account.AccountNumber}"/>
+<apex:column value="{!account.Phone}"/>
+<apex:column value="{!account.BillingStreet}"/>
+<apex:column >
+    <apex:variable value="{!index+1}" var="index"> <!--Incrementing row Number -->
+                    </apex:variable>
+    </apex:column>
+</apex:pageblocktable>
+    
+</apex:pageblock>
+</apex:page>

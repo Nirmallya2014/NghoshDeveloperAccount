@@ -1,0 +1,13 @@
+<apex:page controller="ListDataController">
+<script> 
+         var Datas= []; 
+    </script> 
+    <apex:repeat value="{!Accounts}" var="account"> 
+        <script> 
+            Datas.push('{!account}'); 
+        </script> 
+    </apex:repeat>
+    <script>
+    alert(Datas[0]);
+    </script>
+</apex:page>

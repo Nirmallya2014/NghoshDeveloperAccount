@@ -1,0 +1,7 @@
+<apex:page standardController="Contact" >
+<apex:pageBlock Title="Address Information">
+<apex:pageBlockSection >
+Park Street.
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>
